@@ -1,0 +1,174 @@
+* {
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    font-family: 'Josefin Sans';
+    color:azure;
+}
+
+
+/*Delete T1 later  */
+.t1 {
+    font-size: 200%;
+    padding: 175px 70px;
+    color: rgba(255, 255, 255, 0.47);
+}
+
+
+
+@font-face {
+  font-family: Syncopate;
+  src: url("Syncopate/Syncopate-Bold.ttf");
+  font-weight: bold;
+}
+
+
+/**************************
+        HEADER`
+***************************/
+
+
+
+header {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    /*background-color: rgba(111, 111, 111, 0.5);*/
+    /*background-color: rgba(255, 255, 255, 0.92);*/
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.70);
+    color: black;
+    mix-blend-mode: screen; 
+}
+
+
+.nav-flex, .head-flex {
+    display: flex;
+    flex: auto;
+}
+
+.title {
+    flex: 1;
+    padding-left:  20px;
+    margin: auto;
+    user-select: none;
+    font-family: 'Syncopate';
+    font-size: 150%;
+    letter-spacing: 4px;
+    word-spacing: 10px;
+    color: black;
+   /* background-color: white;
+    mix-blend-mode: screen; */
+}
+
+#main-nav {
+    display: flex;
+    flex: 4;
+    margin: auto;
+    text-align: right;
+    margin-right: 1%;
+}
+
+#main-nav {
+    display: flex;
+    flex: 1.5;
+    justify-content: space-around;
+    text-align: right;
+}
+
+#main-nav li {
+    list-style: none;
+}
+
+#main-nav li a:link,
+#main-nav li a:visited {
+    color: black;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    letter-spacing: 2px;
+    user-select: none;
+}
+
+
+#main-nav li a:hover,
+#main-nav li a:active {
+    border-bottom: 2px solid black;
+    color: #0029d8;
+    text-decoration: none;
+}
+
+
+
+/**************************
+        MAIN PAGE
+***************************/
+
+
+#main {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.9)), url(img/desk.JPG);
+    background-position: center;
+    background-size: cover;
+    align-content: top;
+    /*height: 100vh;
+    background-attachment: fixed;
+    padding: 70px 40px;*/
+}
+
+/**************************
+        PROJECTS
+***************************/
+
+#projects {
+    background-image: linear-gradient(rgba(30, 144, 255, 0.8), rgba(0, 0, 0, 1)), url(img/rockies.jpg);
+    background-size: cover;
+    background-position: center;
+    vertical-align: text-top;
+    /*height: 100vh;
+    background-attachment: fixed;
+    padding: 70px 40px;*/
+}
+
+/**************************
+        SKILLS
+***************************/
+
+#skills {
+    background-color: burlywood;
+    /*background-size: cover;
+    background-position: center;
+    height: 100vh;
+    padding: 70px 40px;*/
+}
+
+/**************************
+        ABOUT
+***************************/
+
+#about {
+    background-color: rgb(30, 144, 255);
+    /*background-size: cover;
+    background-position: center;
+    height: 100vh;
+    padding: 70px 40px;*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
