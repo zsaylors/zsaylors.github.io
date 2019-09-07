@@ -1,4 +1,12 @@
 <!DOCTYPE html>
+
+<!--
+1.  Stop video when switiching screen to prevent text bug
+2.  creat mail box
+3. figure out how to get ftp to work!
+
+
+-->
 <html lang="en">
     <head>
         <meta charset="utf-8">
@@ -7,73 +15,122 @@
 <!--Download the two fonts later and put in CSS Folder.  Consolidate Syncopate file into one single font file.-->
         <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+        
+                <script src="vendors/js/jquery-3.4.1.js"></script>
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="/favicon_package_v0.16//apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon_package_v0.16/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon_package_v0.16//favicon-16x16.png">
+        <link rel="manifest" href="/favicon_package_v0.16//site.webmanifest">
+        <link rel="mask-icon" href="/favicon_package_v0.16/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+        
+        <title>Zak Saylors</title>
     </head>
+    
     <body>
-        <!------------------------------------------------------------------------------------------->
-        <!--- HEADER.  This includes navigation and page title -------------------------------------->
-        <header>
+        <!------------------------------------->
+        <!--- Header and Footer --------------->
+         <header>
             <nav class="nav-flex">
                 <div class="head-flex">
                     <p class="title">zak saylors</p>
-                    <!--<ul class="main-nav">-->
                     <ul class="myMenu" id="main-nav">
-                        <li data-menuanchor="main"><a href="#zs/main">main</a></li>
-                        <li data-menuanchor="projects"><a href="#zs/projects">projects</a></li>
-                        <li data-menuanchor="skills"><a href="#zs/skills">skills</a></li>
-                        <li data-menuanchor="about"><a href="#zs/about">about</a></li>
+                        <li data-menuanchor="main" id="mainBtn"><a href="#zs" id="mainBtn1">main</a></li>
+                        <li data-menuanchor="projects" id="projectsBtn"><a href="#zs/projects" id="mainBtn2">projects</a></li>
+                        <li data-menuanchor="skills" id="skillsBtn"><a href="#zs/skills" id="mainBtn3">skills</a></li>
+                        <li data-menuanchor="about" id="aboutBtn"><a href="#zs/about" id="mainBtn4">about</a></li>
                    </ul>
                 </div>
             </nav>
         </header>
         
+        <!-- Footer -->
+        <div class="footer-box">
+            
+            <!-- Resume and contact popup boxes -->
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <p class="res-link"><a href="https://docs.google.com/document/d/108gU6XjXwHRCKSq7PD64Fg9wYMpCCtW4uJIheiPdmx4/edit?usp=sharing" target="_blank"><ion-icon id="print" name="print"></ion-icon> Printer friendly version</a></p>
+                    <div class="close">&times;</div>
+                        
+                        <!-- Resume -->
+                        <iframe src="https://docs.google.com/document/d/e/2PACX-1vRNFbTc7AC39G6olI6zyi6VPPA_TrtOPb58LaEXoQVJyPlKxirLfsNxYfx9DD6Oefhdd58Btu1SpOuH/pub?embedded=true" id="iframe"></iframe>
+                </div>
+            </div>
+            
+            <!-- Footer links -->
+            <div id="footer">
+                <div class="footer">
+                    <ul>
+                        <li><a href="https://www.linkedin.com/in/zak-saylors/" target="_blank" title="LinkedIn"><ion-icon name="logo-linkedin" class="ion-linked"></ion-icon></a></li>
+                        <li><a href="https://github.com/zsaylors" target="_blank" title="GitHub"><ion-icon name="logo-github" class="ion-github"></ion-icon></a></li>
+                        <li><span title="Resume"><ion-icon name="document" class="ion-res" id="myBtn"></ion-icon></span></li>
+                        <!-- Placeholder for contact information -->
+                        <!--<li><span title="Contact Information"><ion-icon name="mail" class="ion-mail" id="myBtn2"></ion-icon></span></li>-->
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        
         <div id="fullpage">
             <div class="section" data-anchor="zs">
-                
-                <!----------------------------------------------------------------------------------->
-                <!--- MAIN PAGE:  This will be the first page of the website ----------------------->
+        
+                <!------------------------------------->
+                <!--- MAIN PAGE ----------------------->
                 <div class="slide" id="main" data-anchor="main">
-                    <p class="t1">Content coming soon.</p><BR>
-                        <BR>
-                        <!--Main Projects: <BR>
-                        1.  Change front page alignment from center.  Add padding <BR>
-                        2.  Add footer with LinkedIn, Guthub, contact, etc.<BR>
-                        3.  Put some projects on the project page.<BR`>
-                        4.  Utilize more JavaScript and CSS to make website look modern.  Work on Aestetics<BR>
-                        5.  Change title text.<BR>
-                        6.  Ion Icons.
-                        7.  Pick difinative fonts.-->
-                </div>
-
-                <!--------------------------------------------------------------------------------------------------->
-                <!--- SECTION ONE: PROJECTS (lists 6-8 key projects.  Emphasizes github link) ----------------------->
-                <div class="slide" id="projects" data-anchor="projects">
-                    <div>
-                    <p><p>
-                    </div>           
-                </div>
-
-                <!---------------------------------------------------------------------------------------------------->
-                <!--- SECTION ONE: SKILLS (lists skill and certifications in a list(s) format) ----------------------->
-                <div  class="slide" id="skills" data-anchor="skills">
-                   <div>
-                    <p></p>
+                    <div class="video-bg">
+                        <p class="main-text">...</p><BR>   
+                        
+                        <video data-autoplay muted onended="videoEnded(this)" onplay="videoStarted(this)">
+                            <source data-src="resources/img/prog.mp4" type="video/mp4" id="video"/>
+                        </video>
+                        
+                        <div class="video-overlay"></div>
                     </div>
                 </div>
 
-                <!--------------------------------------------------------------------------------------------------------------->
-                <!--- SECTION ONE: SKILLS (Breif summery of self.  Have resume link and Github/Linkedin lineked)  --------------->
+                <!------------------------------------->
+                <!--- PROJECTS ----------------------->
+                <div class="slide" id="projects" data-anchor="projects">                    
+                    <div class="projects">
+                        
+                    <p>ayoooo</p>
+                        a<br>b<br>c<br>d<br>e<br>f<br>g<br>g<br>g<br>g<br>g<br>g<br>h<br>h<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>i<br><br><br><br>j<br><br><br><br><br><br>k<br><br><br><br><br><br><br><br>lmnop
+                        
+                        
+                        
+                        
+                    </div>           
+                </div>
+
+                <!------------------------------------->
+                <!--- SKILLS ----------------------->
+                <div  class="slide" id="skills" data-anchor="skills">
+                    <div>
+                    <p>j</p>
+                    </div>
+                </div>
+
+                <!------------------------------------->
+                <!--- ABOUT ----------------------->
                 <div class="slide" id="about" data-anchor="about">
                     <div>
                     <p></p>
                     </div>
-                </div>                    
-            </div>
+                </div>
+                    
+            </div>    
         </div>
         
-                            
+        <!--<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.min.js"></script>-->
         <script src="vendors/js/fullpage.js"></script>
         <script src="resources/js/script.js"></script>
-        <!--<script src="vendors/js/jquery-3.4.1.js"></script>-->
-                            
+        <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    
     </body>
 </html>
+    
+                
